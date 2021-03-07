@@ -233,6 +233,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-kodexplorer=y
           CONFIG_PACKAGE_luci-app-koolproxyR=y
           CONFIG_PACKAGE_luci-app-lxc=y
+          CONFIG_PACKAGE_LingTiGameAcc=y
+          CONFIG_PACKAGE_luci-app-LingTiGameAcc=y
           CONFIG_PACKAGE_luci-app-meshwizard=y
           CONFIG_PACKAGE_luci-app-minidlna=y
           CONFIG_PACKAGE_luci-app-music-remote-center=y
