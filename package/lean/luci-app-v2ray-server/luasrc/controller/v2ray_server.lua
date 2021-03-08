@@ -5,13 +5,13 @@ local v2ray = require "luci.model.cbi.v2ray_server.api.v2ray"
 
 function index()
     if not nixio.fs.access("/etc/config/v2ray_server") then return end
-    entry({"admin", "services", "v2ray_server"}, cbi("v2ray_server/index"), _("V2ray Server"), 3).dependent = true
-    entry({"admin", "services", "v2ray_server", "config"}, cbi("v2ray_server/user")).leaf = true
-    entry({"admin", "services", "v2ray_server", "users_status"}, call("users_status")).leaf = true
-    entry({"admin", "services", "v2ray_server", "check"}, call("v2ray_check")).leaf = true
-    entry({"admin", "services", "v2ray_server", "update"}, call("v2ray_update")).leaf = true
-    entry({"admin", "services", "v2ray_server", "get_log"}, call("get_log")).leaf = true
-    entry({"admin", "services", "v2ray_server", "clear_log"}, call("clear_log")).leaf = true
+    entry({"admin", "vpn", "v2ray_server"}, cbi("v2ray_server/index"), _("V2ray Server"), 3).dependent = true
+    entry({"admin", "vpn", "v2ray_server", "config"}, cbi("v2ray_server/user")).leaf = true
+    entry({"admin", "vpn", "v2ray_server", "users_status"}, call("users_status")).leaf = true
+    entry({"admin", "vpn", "v2ray_server", "check"}, call("v2ray_check")).leaf = true
+    entry({"admin", "vpn", "v2ray_server", "update"}, call("v2ray_update")).leaf = true
+    entry({"admin", "vpn", "v2ray_server", "get_log"}, call("get_log")).leaf = true
+    entry({"admin", "vpn", "v2ray_server", "clear_log"}, call("clear_log")).leaf = true
 end
 
 local function http_write_json(content)

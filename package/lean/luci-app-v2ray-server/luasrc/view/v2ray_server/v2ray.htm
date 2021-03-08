@@ -84,7 +84,7 @@ local v2ray_version=luci.sys.exec("/usr/bin/xray -version | awk '{print $2}' | s
 
 		var ckeckDetailElm = document.getElementById(btn.id + '-detail');
 
-		doAjaxGet('<%=url([[admin]], [[services]], [[v2ray_server]], [[check]])%>', {
+		doAjaxGet('<%=url([[admin]], [[vpn]], [[v2ray_server]], [[check]])%>', {
 			token: tokenStr,
 			arch: ''
 		}, function(json) {
@@ -124,7 +124,7 @@ local v2ray_version=luci.sys.exec("/usr/bin/xray -version | awk '{print $2}' | s
 
 		addPageNotice_v2ray();
 
-		var v2rayUpdateUrl = '<%=url([[admin]], [[services]], [[v2ray_server]], [[update]])%>';
+		var v2rayUpdateUrl = '<%=url([[admin]], [[vpn]], [[v2ray_server]], [[update]])%>';
 		// Download file
 		doAjaxGet(v2rayUpdateUrl, {
 			token: tokenStr,

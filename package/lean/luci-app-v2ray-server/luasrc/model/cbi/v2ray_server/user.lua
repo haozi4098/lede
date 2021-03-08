@@ -10,7 +10,7 @@ local header_type_list = {
 }
 
 m = Map(appname, translate("Server Config"))
-m.redirect = d.build_url("admin", "services", appname)
+m.redirect = d.build_url("admin", "vpn", appname)
 
 s = m:section(NamedSection, arg[1], "user", "")
 s.addremove = false

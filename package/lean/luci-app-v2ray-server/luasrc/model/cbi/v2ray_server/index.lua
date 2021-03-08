@@ -14,17 +14,17 @@ t = m:section(TypedSection, "user", translate("Users Manager"))
 t.anonymous = true
 t.addremove = true
 t.template = "cbi/tblsection"
-t.extedit = ds.build_url("admin", "services", o, "config", "%s")
+t.extedit = ds.build_url("admin", "vpn", o, "config", "%s")
 function t.create(t, e)
     local uuid = luci.sys.exec("echo -n $(cat /proc/sys/kernel/random/uuid)") or ""
     uuid = string.gsub(uuid, "-", "")
     local e = TypedSection.create(t, uuid)
-    luci.http.redirect(ds.build_url("admin", "services", o, "config", uuid))
+    luci.http.redirect(ds.build_url("admin", "vpn", o, "config", uuid))
 end
 function t.remove(t, a)
     t.map.proceed = true
     t.map:del(a)
-    luci.http.redirect(ds.build_url("admin", "services", o))
+    luci.http.redirect(ds.build_url("admin", "vpn", o))
 end
 
 e = t:option(Flag, "enable", translate("Enable"))
