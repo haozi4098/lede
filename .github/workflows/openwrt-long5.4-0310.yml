@@ -73,7 +73,7 @@ jobs:
           # git clone https://github.com/lisaac/luci-app-dockerman.git
           # git clone https://github.com/lisaac/luci-lib-docker.git
           git clone https://github.com/longcat99/long.git
-          git clone https://github.com/longcat99/long.git
+          git clone https://github.com/longcat99/luci-app-dnsfilter.git
 
       - name: Update feeds
         run: |
