@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-longcat5.4
+name: OpenWrt-longcat5.4-分包上传
 
 on:
   workflow_dispatch:
