@@ -13,7 +13,7 @@ function index()
 	end
 
 	entry({"admin", "services", "frps"},
-		firstchild(), _("Frps")).dependent = false
+		firstchild(), _("Frps"),95).dependent = false
 
 	entry({"admin", "services", "frps", "common"},
 		cbi("frps/common"), _("Settings"), 1)
