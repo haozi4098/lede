@@ -457,12 +457,6 @@ jobs:
           name: OpenWrt_package
           path: ./artifact/package/
 
-      - name: Deliver dl
-        uses: actions/upload-artifact@v2
-        with:
-          name: OpenWrt_dl
-          path: ./dl/
-
       - name: Deliver config
         uses: actions/upload-artifact@v2
         with:
