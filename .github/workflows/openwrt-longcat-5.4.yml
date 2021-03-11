@@ -49,6 +49,13 @@ jobs:
       run: |
         df -hT $PWD
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+
+    - name: 电报机器人信息通知
+      run: |
+        if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
+          curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=🎉 主人：
+          您正在使用【${{github.repository}}】仓库的【${{matrix.target}}】文件夹编译固件中,请耐心等待...... 😋" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+        fi
         
     - name: 加载自定义插件主题
       run: |
@@ -659,6 +666,16 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE1_TOKEN }}
+    
+
+    - name: 电报机器人信息通知
+      run: |
+        if [[ "${BOT}" == "TRUE" ]]; then
+          if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
+            curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=我亲爱的✨主人✨：
+            您使用【${{github.repository}}】仓库的【${{matrix.target}}】文件夹编译的[${{ env.NAME2 }}-${{ env.NAME1 }}]固件顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+          fi
+        fi
 
     - name: 微信报告
       uses: emon100/Action-Serverchan@master
