@@ -11,7 +11,7 @@ name: OpenWrt-LEDE5.4Docker
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 22 5 * *
+    - cron: 0 16 * * *
   # release:
     # types: [published]
 
