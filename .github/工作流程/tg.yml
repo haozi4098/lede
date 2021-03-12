@@ -24,6 +24,15 @@ env:
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 检查项目分支
+      uses: actions/checkout@main
+
+
 
     - name: 电报机器人信息通知
       run: |
