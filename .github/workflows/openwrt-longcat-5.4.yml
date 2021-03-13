@@ -76,7 +76,8 @@ jobs:
        git clone https://github.com/lisaac/luci-app-dockerman.git
        git clone https://github.com/lisaac/luci-lib-docker.git
        git clone https://github.com/longcat99/luci-app-dnsfilter.git
-       git clone https://github.com/garypang13/luci-app-bypass
+       # git clone https://github.com/garypang13/luci-app-bypass.git
+       git clone https://github.com/longcat99/luci-app-bypass.git
 
     - name: 下载插件
       run: ./scripts/feeds update -a
