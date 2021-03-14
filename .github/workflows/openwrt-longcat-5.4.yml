@@ -391,7 +391,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-jd-dailybonus=y
           CONFIG_PACKAGE_luci-app-kcptun=y
           CONFIG_PACKAGE_luci-app-kodexplorer=y
-          CONFIG_PACKAGE_luci-app-koolproxyR=y
+          # CONFIG_PACKAGE_luci-app-koolproxyR=y
+          CONFIG_PACKAGE_luci-app-godproxy=y
           CONFIG_PACKAGE_luci-app-lxc=y
           CONFIG_PACKAGE_LingTiGameAcc=y
           CONFIG_PACKAGE_luci-app-LingTiGameAcc=y
