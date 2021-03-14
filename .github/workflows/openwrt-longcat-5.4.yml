@@ -85,6 +85,13 @@ jobs:
     - name: 读取插件
       run: ./scripts/feeds install -a
 
+    - name: 修改bypass支持lean源码重命名shadowsocksr-libev-ssr-redir
+      run: find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-redir/shadowsocksr-libev-alt/g' {}
+
+    - name: 修改bypass支持lean源码重命名shadowsocksr-libev-ssr-server
+      run: find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-ssr-server/shadowsocksr-libev-server/g' {}
+      
+
     - name: 固件定制
       run: |
           rm -f ./.config*
