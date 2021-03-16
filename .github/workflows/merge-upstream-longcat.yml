@@ -47,5 +47,5 @@ jobs:
         fi
     - name: Push Commits
       env:
-        DOWNSTREAM_BRANCH: longcat5.4-105
+        DOWNSTREAM_BRANCH: master
       run: git push origin $DOWNSTREAM_BRANCH
