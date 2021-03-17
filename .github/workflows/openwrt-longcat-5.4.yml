@@ -64,10 +64,10 @@ jobs:
        cd openwrt-packages
        git clone https://github.com/longcat99/long.git
        git clone https://github.com/xiaorouji/openwrt-passwall.git
-       git clone https://github.com/longcat99/helloworld.git
-       # git clone https://github.com/fw876/helloworld.git
-       git clone https://github.com/longcat99/OpenClash.git
-       # git clone https://github.com/vernesong/OpenClash.git
+       # git clone https://github.com/longcat99/helloworld.git
+       git clone https://github.com/fw876/helloworld.git
+       # git clone https://github.com/longcat99/OpenClash.git
+       git clone https://github.com/vernesong/OpenClash.git
        # git clone https://github.com/frainzy1477/luci-app-clash.git
        git clone https://github.com/destan19/OpenAppFilter.git
        git clone https://github.com/jerrykuku/luci-app-ttnode.git
@@ -575,16 +575,16 @@ jobs:
         sed -i 's/"实时流量监测"/"流量"/g' package/lean/luci-app-wrtbwmon/po/zh-cn/wrtbwmon.po
         
         # 修改bypass排序
-        # find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-bypass/luasrc/controller/bypass.lua" | xargs -i sed -i 's/\"Bypass\")\,10/\"大佬牛逼\")\,0/g' {}
+        find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-bypass/luasrc/controller/bypass.lua" | xargs -i sed -i 's/\"Bypass\")\,2/\"大佬牛逼\")\,0/g' {}
 
         # 修改DNSFilter排序
         # find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-dnsfilter/luasrc/controller/dnsfilter.lua" | xargs -i sed -i 's/\"DNSFilter\")\,0/\"DNSFilter\")\,3/g' {}
 
         # 修改openclash排序
-        # find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-openclash/luasrc/controller/openclash.lua" | xargs -i sed -i 's/\"openclash\")\,0/\"小猫咪\")\,1/g' {}
+        find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-openclash/luasrc/controller/openclash.lua" | xargs -i sed -i 's/\"openclash\")\, 50/\"小猫咪\")\, 1/g' {}
 
         # 修改ShadowSocksR Plus+排序
-        # find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua" | xargs -i sed -i 's/\"ShadowSocksR Plus+\")\, 10/\"大雕无敌\")\, 0/g' {}
+        find package/*/ feeds/*/ -maxdepth 4 -path "*luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua" | xargs -i sed -i 's/\"ShadowSocksR Plus+\")\, 10/\"大雕无敌\")\, 0/g' {}
 
 
         # 修改GodProxy滤广告排序 重命名为:去TMD广告
@@ -602,11 +602,11 @@ jobs:
         # 修改luci/luci-app-ddns排序
         # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns/luasrc/controller/ddns.lua" | xargs -i sed -i 's/\"Dynamic DNS\")\, 59/\"Dynamic DNS\")\, 4/g' {}
         # 修改luci-app-ddns导航菜单位置
-        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns/luasrc/controller/ddns.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
-        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/detail.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
-        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/global.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
-        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/hints.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
-        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/overview.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
+        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns/luasrc/controller/ddns.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
+        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/detail.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
+        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/global.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
+        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/hints.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
+        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-ddns//luasrc/model/cbi/ddns/overview.lua" | xargs -i sed -i 's/\"services\"/\"ddns\"/g' {}
 
 
         # 修改luci-app-v2ray-server导航菜单位置到vpn
