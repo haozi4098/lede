@@ -24,7 +24,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        ref: master
+        ref: longcat5.4-105
         fetch-depth: 0
         lfs: true
 
