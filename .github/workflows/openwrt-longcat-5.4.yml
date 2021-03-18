@@ -583,7 +583,7 @@ jobs:
         # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-dnsfilter/luasrc/controller/dnsfilter.lua" | xargs -i sed -i 's/\"DNSFilter\")\,0/\"DNSFilter\")\,3/g' {}
 
         # 修改openclash排序
-        find package/*/ feeds/*/ -maxdepth 6 -path "*OpenClash/luci-app-openclash/luasrc/controller/openclash.lua" | xargs -i sed -i 's/\"openclash\")\, 50/\"小猫咪\")\, 1/g' {}
+        find package/*/ feeds/*/ -maxdepth 6 -path "*OpenClash/luci-app-openclash/luasrc/controller/openclash.lua" | xargs -i sed -i 's/\"OpenClash\")\, 50/\"小猫咪\")\, 1/g' {}
 
         # 修改ShadowSocksR Plus+排序
         find package/*/ feeds/*/ -maxdepth 6 -path "*helloworld/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua" | xargs -i sed -i 's/\"ShadowSocksR Plus+\")\, 10/\"大雕无敌\")\, 0/g' {}
