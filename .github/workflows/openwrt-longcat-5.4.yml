@@ -392,6 +392,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
           CONFIG_PACKAGE_luci-app-iptvhelper=y
+          CONFIG_PACKAGE_iptvhelper=y
           CONFIG_PACKAGE_luci-app-jd-dailybonus=y
           CONFIG_PACKAGE_luci-app-kcptun=y
           CONFIG_PACKAGE_luci-app-kodexplorer=y
