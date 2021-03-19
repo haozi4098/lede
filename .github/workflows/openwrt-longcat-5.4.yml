@@ -451,7 +451,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           CONFIG_PACKAGE_luci-app-sfe=y
-          CONFIG_PACKAGE_luci-app-smartdns=y
+          # CONFIG_PACKAGE_luci-app-smartdns=y
           CONFIG_PACKAGE_luci-app-socat=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-ssr-libev-server=y
@@ -621,7 +621,7 @@ jobs:
         # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/user.lua" | xargs -i sed -i 's/\"services\"/\"vpn\"/g' {}
         
         # 修改bypass依赖为smartdns
-        find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/smartdns-le/smartdns/g' {}
+        # find package/*/ feeds/*/ -maxdepth 5 -path "*luci-app-bypass/Makefile" | xargs -i sed -i 's/smartdns-le/smartdns/g' {}
         
       
         
