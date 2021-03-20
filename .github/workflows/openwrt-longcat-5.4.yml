@@ -82,7 +82,8 @@ jobs:
        git clone https://github.com/kuoruan/luci-app-kcptun.git
        git clone https://github.com/project-lede/luci-app-godproxy.git
        svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb
-       git clone https://github.com/riverscn/openwrt-iptvhelper.git
+       git clone https://github.com/riverscn/openwrt-iptvhelper.git && mv openwrt-iptvhelper/luci-app-iptvhelper/po/zh_Hans openwrt-iptvhelper/luci-app-iptvhelper/po/zh-cn
+       
 
     - name: 下载插件
       run: ./scripts/feeds update -a
