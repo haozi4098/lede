@@ -83,6 +83,7 @@ jobs:
        git clone https://github.com/project-lede/luci-app-godproxy.git
        svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb
        git clone https://github.com/riverscn/openwrt-iptvhelper.git && mv openwrt-iptvhelper/luci-app-iptvhelper/po/zh_Hans openwrt-iptvhelper/luci-app-iptvhelper/po/zh-cn
+       svn co https://github.com/Lienol/openwrt/trunk/package/network/fullconenat && rm -f fullconenat/patches/000-printk.patch
        
 
     - name: 下载插件
@@ -164,6 +165,7 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
+          CONFIG_PACKAGE_fullconenat=y
           EOF
 
           # 多文件系统支持:
