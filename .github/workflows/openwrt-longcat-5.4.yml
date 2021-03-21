@@ -83,7 +83,8 @@ jobs:
        git clone https://github.com/project-lede/luci-app-godproxy.git
        svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb
        git clone https://github.com/riverscn/openwrt-iptvhelper.git && mv openwrt-iptvhelper/luci-app-iptvhelper/po/zh_Hans openwrt-iptvhelper/luci-app-iptvhelper/po/zh-cn
-       svn co https://github.com/Lienol/openwrt/trunk/package/network/fullconenat && rm -f fullconenat/patches/000-printk.patch
+       svn co https://github.com/Lienol/openwrt/trunk/package/network/fullconenat && rm -f fullconenat/patches/000-printk.patch        
+       git clone --depth 1 -b LUCI-LUA-UCITRACK https://github.com/CCnut/feed-netkeeper && mv -n feed-netkeeper/* ./ ; rm -Rf feed-netkeeper
        
 
     - name: 下载插件
@@ -417,6 +418,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-nps=y
           CONFIG_PACKAGE_luci-app-nginx-pingos=y
           CONFIG_PACKAGE_luci-app-nlbwmon=y
+          CONFIG_PACKAGE_luci-app-netkeeper=y
           CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-ocserv=y
