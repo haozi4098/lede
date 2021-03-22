@@ -418,7 +418,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-nps=y
           CONFIG_PACKAGE_luci-app-nginx-pingos=y
           CONFIG_PACKAGE_luci-app-nlbwmon=y
-          CONFIG_PACKAGE_luci-app-netkeeper=y
+          CONFIG_PACKAGE_luci-app-netkeeper-interception=y
           CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-ocserv=y
