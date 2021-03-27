@@ -97,7 +97,7 @@ jobs:
        git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
        git clone https://github.com/jerrykuku/luci-app-argon-config.git
        git clone https://github.com/garypang13/luci-app-eqos.git
-       git clone --depth 1 -b 18.06 https://github.com/riverscn/luci-app-omcproxy.git
+   
 
     - name: 下载插件
       run: ./scripts/feeds update -a
