@@ -405,7 +405,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-gost=y
-          CONFIG_PACKAGE_luci-app-gowebdav = y
+          CONFIG_PACKAGE_luci-app-gowebdav=y
           CONFIG_PACKAGE_luci-app-haproxy-tcp=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
@@ -524,12 +524,12 @@ jobs:
 
           # LuCI主题:
           cat >> .config <<EOF
-          # CONFIG_PACKAGE_luci-theme-argon=y
+          CONFIG_PACKAGE_luci-theme-argon=y
           # CONFIG_PACKAGE_luci-theme-argon-lean=y
           # CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_luci-theme-freifunk-generic=y
-          CONFIG_PACKAGE_luci-theme-argon-leanimg=y
+          # CONFIG_PACKAGE_luci-theme-argon-leanimg=y
           CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-theme-opentomcat=y
           CONFIG_PACKAGE_luci-theme-opentomato=y
@@ -581,7 +581,7 @@ jobs:
         sed -i "s/OpenWrt /龙猫 build $(TZ=UTC-8 date "+%Y%m%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
         
         # 修改默认命令行为zsh
-        sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
+        # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
        
         # 修改argon为默认主题,可根据你喜欢的修改成其他的（不选择那些会自动改变为默认主题的主题才有效果）
         # sed -i 's/luci-theme-bootstrap/luci-theme-argon-leanimg/g' feeds/luci/collections/luci/Makefile
