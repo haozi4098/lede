@@ -11,7 +11,7 @@ name: LongCat-LEDE
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 16 * * *
+  #  - cron: 0 16 * * *
   # release:
     # types: [published]
 
