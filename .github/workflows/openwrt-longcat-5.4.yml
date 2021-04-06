@@ -98,7 +98,7 @@ jobs:
        git clone https://github.com/immortalwrt/openwrt-gowebdav.git
        git clone --depth 1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
        git clone https://github.com/jerrykuku/luci-app-argon-config.git
-       git clone https://github.com/garypang13/luci-app-eqos.git
+       git clone https://github.com/garypang13/luci-app-eqos.git && mv luci-app-eqos/po/zh_Hans luci-app-eqos/po/zh-cn
    
 
     - name: 下载插件
