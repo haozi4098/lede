@@ -84,8 +84,10 @@ jobs:
        git clone https://github.com/lisaac/luci-app-dockerman.git
        git clone https://github.com/lisaac/luci-lib-docker.git
        git clone https://github.com/longcat99/luci-app-dnsfilter.git
-       git clone https://github.com/garypang13/luci-app-bypass.git
-       git clone --depth 1 https://github.com/garypang13/smartdns-le
+       # git clone https://github.com/garypang13/luci-app-bypass.git
+       git clone https://github.com/longcat99/luci-app-bypass.git
+       # git clone --depth 1 https://github.com/garypang13/smartdns-le
+       git clone --depth 1 https://github.com/longcat99/smartdns-le
        # git clone https://github.com/longcat99/luci-app-bypass.git
        git clone https://github.com/kuoruan/luci-app-kcptun.git
        git clone https://github.com/project-lede/luci-app-godproxy.git
