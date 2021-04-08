@@ -472,7 +472,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=y
           CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-serverchan=y
-          CONFIG_PACKAGE_luci-app-sfe=y
+          # CONFIG_PACKAGE_luci-app-sfe=y
           # CONFIG_PACKAGE_luci-app-smartdns=y
           CONFIG_PACKAGE_luci-app-socat=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
