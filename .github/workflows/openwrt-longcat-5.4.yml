@@ -576,7 +576,17 @@ jobs:
       run: |
         # 修改openwrt登陆地址,把下面的192.168.6.1修改成你想要的就可以了
         sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
+        # sed -i "/uci commit fstab/a\uci commit network" package/lean/default-settings/files/zzz-default-settings
+        # sed -i "/uci commit network/i\uci set network.lan.ipaddr='192.168.100.252'" package/lean/default-settings/files/zzz-default-settings              # IPv4 地址(openwrt后台地址)
+        # sed -i "/uci commit network/i\uci set network.lan.netmask='255.255.255.0'" package/lean/default-settings/files/zzz-default-settings           # IPv4 子网掩码
+        # sed -i "/uci commit network/i\uci set network.lan.gateway='192.168.100.253'" package/lean/default-settings/files/zzz-default-settings             # IPv4 网关
+        # sed -i "/uci commit network/i\uci set network.lan.broadcast='192.168.100.255'" package/lean/default-settings/files/zzz-default-settings         # IPv4 广播
+        # sed -i "/uci commit network/i\uci set network.lan.dns='223.5.5.5 114.114.114.114'" package/lean/default-settings/files/zzz-default-settings   # DNS(多个DNS要用空格分开)
+        # sed -i "/uci commit network/i\uci set network.lan.delegate='0'" package/lean/default-settings/files/zzz-default-settings                      # 去掉LAN口使用内置的 IPv6 管理
        
+        sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
+        sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
+
         # 修改主机名字，把OpenWrt-1.0修改你喜欢的就行（不能纯数字或者使用中文）
         # sed -i '/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-1.0'' package/lean/default-settings/files/zzz-default-settings
        
