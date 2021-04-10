@@ -101,6 +101,7 @@ jobs:
        git clone https://github.com/garypang13/luci-app-eqos.git && mv luci-app-eqos/po/zh_Hans luci-app-eqos/po/zh-cn
        git clone https://github.com/tty228/luci-app-serverchan.git
        git clone https://github.com/sirpdboy/luci-app-autotimeset.git
+       git clone https://github.com/sirpdboy/NetSpeedTest && mv NetSpeedTest/luci-app-NetSpeedTest/luasrc/controller/NetSpeedTest.lua NetSpeedTest/luci-app-NetSpeedTest/luasrc/controller/netspeedtest.lua
        
        
        
@@ -440,6 +441,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-nlbwmon=y
           CONFIG_PACKAGE_luci-app-netkeeper-interception=y
           CONFIG_PACKAGE_luci-app-ntpc=y
+          CONFIG_PACKAGE_luci-app-netspeedtest=y
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-ocserv=y
           CONFIG_PACKAGE_luci-app-omcproxy=y
