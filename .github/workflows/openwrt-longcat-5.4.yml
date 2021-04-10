@@ -100,6 +100,10 @@ jobs:
        git clone https://github.com/jerrykuku/luci-app-argon-config.git
        git clone https://github.com/garypang13/luci-app-eqos.git && mv luci-app-eqos/po/zh_Hans luci-app-eqos/po/zh-cn
        git clone https://github.com/tty228/luci-app-serverchan.git
+       git clone https://github.com/sirpdboy/luci-app-autotimeset.git
+       
+       
+       
    
 
     - name: 下载插件
@@ -366,7 +370,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-argon-config=y
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-arpbind=y
-          CONFIG_PACKAGE_luci-app-autopoweroff=y
+          CONFIG_PACKAGE_luci-app-autotimeset=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
           CONFIG_PACKAGE_luci-app-baidupcs-web=y
           CONFIG_PACKAGE_luci-app-brook-server=y
