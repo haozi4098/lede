@@ -631,7 +631,7 @@ jobs:
 
 
         # 修改GodProxy滤广告排序 重命名为:去TMD广告
-        find package/*/ feeds/*/ -maxdepth 6 -path "*luci-app-godproxy/luasrc/controller/koolproxy.lua" | xargs -i sed -i 's/\"GodProxy滤广告\")\,1/\"GodProxy滤广告\")\,10/g' {}
+        find package/*/ feeds/*/ -maxdepth 6 -path "*luci-app-godproxy/luasrc/controller/koolproxy.lua" | xargs -i sed -i 's/\"KoolproxyR Plus+\")\,1/\"KoolproxyR Plus+\")\,10/g' {}
 
         # 修改luci-app-smartdns排序 
         find package/*/ feeds/*/ -maxdepth 6 -path "*luci-app-smartdns/luasrc/controller/smartdns.lua" | xargs -i sed -i 's/\"SmartDNS\")\, 4/\"SmartDNS\")\, 3/g' {}
