@@ -104,6 +104,9 @@ jobs:
        git clone https://github.com/tty228/luci-app-serverchan.git
        git clone https://github.com/sirpdboy/luci-app-autotimeset.git
        # git clone https://github.com/sirpdboy/NetSpeedTest
+       svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-nginx-pingos
+       svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-pppoe-server
+       git clone https://github.com/BoringCat/luci-app-mentohust.git
        
        
        
@@ -434,6 +437,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-music-remote-center=y
           CONFIG_PACKAGE_luci-app-mwan3=y
           CONFIG_PACKAGE_luci-app-mwan3helper=y
+          CONFIG_PACKAGE_luci-app-mentohust=y
           CONFIG_PACKAGE_luci-app-n2n_v2=y
           CONFIG_PACKAGE_luci-app-naiveproxy=y
           CONFIG_PACKAGE_luci-app-netdata-zh=y
@@ -480,7 +484,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=y
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=y
-          CONFIG_PACKAGE_luci-app-rp-pppoe-server=y
+          CONFIG_PACKAGE_luci-app-pppoe-server=y
           CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           # CONFIG_PACKAGE_luci-app-sfe=y
