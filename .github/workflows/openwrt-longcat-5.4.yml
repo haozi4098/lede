@@ -88,8 +88,8 @@ jobs:
        # git clone https://github.com/longcat99/luci-app-bypass.git
        git clone --depth 1 https://github.com/garypang13/smartdns-le
        # git clone --depth 1 https://github.com/longcat99/smartdns-le
-       git clone --depth 1 https://github.com/pymumu/smartdns
-       git clone --depth 1 https://github.com/pymumu/luci-app-smartdns
+       # git clone --depth 1 https://github.com/pymumu/smartdns
+       # git clone --depth 1 https://github.com/pymumu/luci-app-smartdns
        # git clone https://github.com/longcat99/luci-app-bypass.git
        git clone https://github.com/kuoruan/luci-app-kcptun.git
        git clone https://github.com/project-lede/luci-app-godproxy.git
@@ -488,7 +488,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-serverchan=y
           # CONFIG_PACKAGE_luci-app-sfe=y
-          CONFIG_PACKAGE_luci-app-smartdns=y
+          # CONFIG_PACKAGE_luci-app-smartdns=y
           CONFIG_PACKAGE_luci-app-socat=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-ssr-libev-server=y
